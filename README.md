@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CareTrack - Medical Assistance CRM & Case Management Backend
 
 A Spring Boot backend for a medical assistance CRM and case management system, designed for health insurance assistance companies. This project implements the core backend APIs for case management, provider management, communications, calls, invoicing, and reporting.
@@ -134,3 +135,7 @@ I collaborated closely with the team to deliver a scalable, production-ready Saa
 ## License
 
 This project is for demonstration purposes only.
+=======
+# j-v-backend-caretrack
+built a modular Spring boot backend for medical assistance CRM and case management system using layered architecture, developed REST APIs, JWT authentication, RBAC,DTO mapping and email ,Whatsapp VOIP calling, 
+>>>>>>> 82624462ec5d3bbfd8dc9cb318ca5617ba6e9a43
