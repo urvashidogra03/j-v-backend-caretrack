@@ -1,5 +1,6 @@
 package com.caretrack.provider.controller;
 
+
 import com.caretrack.provider.dto.NearbyProviderResponse;
 import com.caretrack.provider.dto.ProviderCreateRequest;
 import com.caretrack.provider.dto.ProviderResponse;
@@ -44,7 +45,7 @@ public class ProviderController {
      *   /api/providers/nearby?lat=19.0760&lon=72.8777&radiusKm=15&type=HOSPITAL
      */
     @GetMapping("/nearby")
-    public ResponseEntity<List<NearbyProviderResponse>> nearby(
+    public ResponseEntity< List<NearbyProviderResponse>> nearby(
             @RequestParam("lat") BigDecimal lat,
             @RequestParam("lon") BigDecimal lon,
             @RequestParam(value = "radiusKm", required = false) Double radiusKm,
@@ -52,5 +53,7 @@ public class ProviderController {
     ) {
         List<NearbyProviderResponse> results = providerService.findNearbyProviders(lat, lon, radiusKm, type);
         return ResponseEntity.ok(results);
+      }
+
     }
-}
+
