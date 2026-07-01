@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "caretrack.security.jwt")
 public class JwtProperties {
     /**
+     * ConfigurationProperties used to read a group of related values from configuration files (application.properties or application.yml) and store them in a Java object (bean).
      * Secret used to sign JWTs. In production, inject via environment/secret manager.
      * For HS256, a 32+ byte secret is recommended.
      */
