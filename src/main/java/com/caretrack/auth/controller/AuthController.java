@@ -47,8 +47,8 @@ public class AuthController {
         try {
            //Spring Security’s login OBJECT i.e. DTO ::Contains user enter email + password
             var authToken = new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword());
-            //✔ This is the actual login-where user dto request i.e.authToken is send to below mwthod to check authnetication
-            //✔ Spring checks:does user exist?does password match?is account enabled?
+            //✔ This is the actual login-where user dto request i.e.authToken is send to below method to check authentication
+            //✔ Spring checks:does user exist?does password match?is account enabled or not?
 
             //If wrong → throws BadCredentialsException...// .Authenticate user
             //
@@ -67,7 +67,7 @@ public class AuthController {
             Set<String> roleNames = user.getRoles() == null
                     ? Set.of()
                     : user.getRoles().stream().map(Role::name).collect(Collectors.toSet());
-//Create UserInfo object for response containing user info defined in AuthUserInfo class under dto loginresponse.java..// .So you are sending the logged-in user's info from the database user object → into the DTO AuthUserInfo.
+//Create UserInfo object for response containing user info defined in AuthUserInfo class under dto login response.java..// .So you are sending the logged-in user's info from the database user object → into the DTO AuthUserInfo.
             var userInfo = new LoginResponse.AuthUserInfo(
                     user.getId(),   //You are literally calling the constructor:
                     user.getEmail(),//new AuthUserInfo(id, email, fullName, roles)
